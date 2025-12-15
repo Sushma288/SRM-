@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemicon Electronics - SRM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo">
+            <h1>Zemicon Electronics</h1>
+            <p>Supplier Relationship Management</p>
+        </div>
+
+        <nav>
+            <a href="{{ url_for('register') }}" class="btn hover-effect">Register</a>
+            <a href="{{ url_for('login') }}" class="btn hover-effect">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Supplier Management -->
+        <ul class="feature-list">
+            <li>
+                <h2><label for="drop1">Supplier Management▼</label></h2>
+
+                <input type="checkbox" id="drop1" class="dropdown-toggle">
+
+                <ul class="dropdown">
+                    <li><a href="#">Add suppliers</a></li>
+                    <li><a href="#">Update supplier info</a></li>
+                    <li><a href="#">Supplier categories</a></li>
+                    <li><a href="#">Supplier documents</a></li>
+                </ul>
+
+                <p>Manage your suppliers efficiently with tools for onboarding, evaluation, and relationship building.</p>
+            </li>
+        </ul>
+
+        <!-- Procurement Management -->
+        <ul class="feature-list">
+            <li>
+                <h2><label for="drop2">Procurement Management▼</label></h2>
+
+                <input type="checkbox" id="drop2" class="dropdown-toggle">
+
+                <ul class="dropdown">
+                    <li><a href="#">Purchase Requisitions</a></li>
+                    <li><a href="#">Purchase Orders</a></li>
+                    <li><a href="#">Approval workflows</a></li>
+                </ul>
+
+                <p>Streamline procurement processes from requisition to PO, ensuring cost-effective and timely acquisitions.</p>
+            </li>
+        </ul>
+
+        <!-- Performance Tracking -->
+        <ul class="feature-list">
+            <li>
+                <h2><label for="drop3">Performance Tracking▼</label></h2>
+
+                <input type="checkbox" id="drop3" class="dropdown-toggle">
+
+                <ul class="dropdown">
+                    <li><a href="#">Delivery quality</a></li>
+                    <li><a href="#">Response time</a></li>
+                    <li><a href="#">Rating system</a></li>
+                </ul>
+
+                <p>Monitor supplier performance with real-time metrics, KPIs, and analytics for continuous improvement.</p>
+            </li>
+        </ul>
+
+        <!-- Reports -->
+        <ul class="feature-list">
+            <li>
+                <h2><label for="drop4">Reports▼</label></h2>
+
+                <input type="checkbox" id="drop4" class="dropdown-toggle">
+
+                <ul class="dropdown">
+                    <li><a href="#">Spend analysis</a></li>
+                    <li><a href="#">Top suppliers</a></li>
+                    <li><a href="#">Delayed deliveries</a></li>
+                </ul>
+
+                <p>Generate reports on supplier data, procurement trends, and performance insights.</p>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Zemicon Electronics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
