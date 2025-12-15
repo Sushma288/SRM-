@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <div class="logo" style="text-align: center; width: 100%;">
+            <h1>Zemicon Electronics</h1>
+            <p>Supplier Relationship Management (SRM)</p>
+        </div>
+    </header>
+
+    <!-- CENTERED REGISTER BOX -->
+    <div class="page-center-wrapper">
+        <div class="container fade-in">
+            <h2>Register</h2>
+
+            <form method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+
+                <select name="role" required>
+                    <option value="employee">Employee</option>
+                    <option value="customer">Customer</option>
+                </select>
+
+                <button type="submit" class="btn hover-effect">Register</button>
+            </form>
+
+            <a href="{{ url_for('login') }}">Already have an account? Login</a>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <p class="{{ category }}">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+</body>
+</html>
